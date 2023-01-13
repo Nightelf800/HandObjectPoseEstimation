@@ -1,0 +1,29 @@
+2023-01-13 12:42:47,856 [   INFO] run command: train/submit_reload.py --cfg config_eval/eval_dexycb_clasbased_sym_artiboost.yaml --gpu_id 0
+2023-01-13 12:42:47,861 [   INFO] dump cfg file to ./exp/submit_eval_dexycb_clasbased_sym_artiboost_2023_0113_1242_47/dump_cfg.yaml
+2023-01-13 12:42:47,861 [   INFO] dump args: (Namespace(batch_size=128, cfg='config_eval/eval_dexycb_clasbased_sym_artiboost.yaml', device='cuda', drop_last=True, evaluate=False, exp_id='default', filter_unseen_obj_idxs=[], gpu_id='0', gpu_render_port='34567', gpus=[0], postprocess_draw=False, postprocess_draw_path=None, postprocess_fit_mesh=False, postprocess_fit_mesh_ik='iknet', postprocess_fit_mesh_use_fitted_joints=False, resume=None, resume_epoch=0, snapshot=50, submit_dataset='hodata', submit_dump=False, test_freq=5, true_bone_scale=False, true_root=False, use_pseudo_hand_root=False, vis_toc=5, workers=20), {'BATCH_SIZE': 128, 'EPOCH': 100, 'OPTIMIZER': 'adam', 'LR': 5e-05, 'LR_FACTOR': 0.1, 'WEIGHT_DECAY': 0, 'LR_DECAY_STEP': 100, 'LR_DECAY_GAMMA': 1.0, 'MANUAL_SEED': 1, 'GRAD_CLIP': 0.001, 'EVAL_FREQ': 5, 'VAL_START_EPOCH': 15})
+2023-01-13 12:42:47,861 [WARNING] Submit with hodata dataset!
+2023-01-13 12:42:47,861 [WARNING] Use hand_obj to crop image in DexYCB
+2023-01-13 12:42:47,861 [   INFO] DexYCB uses center_idx 9
+2023-01-13 12:42:47,882 [   INFO] DexYCB use split: s0_test
+2023-01-13 12:42:49,773 [   INFO] Loaded cache for DexYCB_test_s0 from common/cache/DexYCB/9fb79af8c22cdc2b8cc7cda1142caca3.pkl
+2023-01-13 12:42:49,774 [WARNING] HybridBaseline's backbone ResNet34 weights will be rewritten by checkpoints/artiboost_dexycb_clasbased_sym_100e.pth.tar
+2023-01-13 12:42:50,021 [   INFO] Loading ResNet34 pretrained models
+2023-01-13 12:42:50,279 [   INFO] ResNet34 has 83.15151977539062M parameters
+2023-01-13 12:42:50,295 [   INFO] => init deconv weights from normal distribution
+2023-01-13 12:42:50,318 [   INFO] => init final conv weights from normal distribution
+2023-01-13 12:42:50,320 [   INFO] => Loading HybridBaseline pretrained model from: checkpoints/artiboost_dexycb_clasbased_sym_100e.pth.tar
+2023-01-13 12:42:52,324 [   INFO] HybridBaseline uses center_idx 9
+2023-01-13 12:42:52,325 [   INFO] HybridBaseline has 96.38875579833984M parameters
+2023-01-13 12:42:52,345 [   INFO] Construct JointsLoss with lambda: 
+2023-01-13 12:42:52,345 [   INFO]   |   LAMBDA_JOINTS_3D : 1.0
+2023-01-13 12:42:52,345 [   INFO]   |   LAMBDA_CORNERS_3D : 0.0
+2023-01-13 12:42:52,346 [   INFO] Construct HandOrdLoss with lambda: 
+2023-01-13 12:42:52,346 [   INFO]   |  LAMBDA_PART_LEVEL : 1.0
+2023-01-13 12:42:52,346 [   INFO]   |  LAMBDA_JOINT_LEVEL : 1.0
+2023-01-13 12:42:52,443 [   INFO] Construct SymCornerLoss with lambda: 
+2023-01-13 12:42:52,443 [   INFO]   |   LAMBDA_SYM_CORNERS_3D : 1.0
+2023-01-13 12:42:52,443 [   INFO] CONSTRUCT CRITERION WITH LAMBDAS: 
+2023-01-13 12:42:52,443 [   INFO]   |  LAMBDA_JointsLoss : 0.5
+2023-01-13 12:42:52,443 [   INFO]   |  LAMBDA_HandOrdLoss : 0.2
+2023-01-13 12:42:52,443 [   INFO]   |  LAMBDA_SymCornerLoss : 0.1
+2023-01-13 12:42:52,444 [   INFO] MSSD use corners to simplify calculation
