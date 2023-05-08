@@ -1,0 +1,16 @@
+DATASET:
+  TEST:
+    TYPE: HO3D
+    DATA_SPLIT: test
+    DATA_ROOT: ./data
+    SPLIT_MODE: paper
+    AUG: false
+    AUG_PARAM: null
+    USE_OBJ: false
+
+DATA_PRESET:
+  USE_CACHE: true
+  FILTER_NO_CONTACT: false
+  FILTER_THRESH: 0.0
+  BBOX_EXPAND_RATIO: 1.2
+  FULL_IMAGE: false
